@@ -1,3 +1,6 @@
+//PRN : 123B1F067
+//Sagar Najardhane
+//Disaster relief resource allocation use 0/1 knapsack approach to optimize essential supply allocation within capactiy limits
 import java.util.*;
 
 class CargoItem {
@@ -16,7 +19,6 @@ class CargoItem {
 
 public class AssignmentNo6 {
 
-    // Boost utility of perishable items
     static void boostPerishableUtility(List<CargoItem> items) {
         for (CargoItem it : items) {
             if (it.perishable) {
@@ -25,7 +27,6 @@ public class AssignmentNo6 {
         }
     }
 
-    // Display selected items
     static void displaySelectedItems(int[][] dp, List<CargoItem> items, int capacity) {
         int i = items.size();
         int w = capacity;
@@ -47,7 +48,6 @@ public class AssignmentNo6 {
         System.out.println("Total Weight Loaded: " + totalWeight + " kg");
     }
 
-    // Dynamic Programming - 0/1 Knapsack
     static int knapsackDP(List<CargoItem> items, int capacity) {
         int n = items.size();
         int[][] dp = new int[n + 1][capacity + 1];
@@ -85,3 +85,4 @@ public class AssignmentNo6 {
         System.out.println("\n📦 Maximum Total Utility (using DP): " + maxUtility);
     }
 }
+
