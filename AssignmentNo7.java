@@ -1,3 +1,6 @@
+//PRN : 123B1F067
+//Sagar Najardhane
+//University time table scheduling implement graph coloring technique to generate conflict force and efficient time table
 import java.util.*;
 
 public class AssignmentNo7 {
@@ -56,3 +59,4 @@ public class AssignmentNo7 {
         greedyColoring(graph, numCourses);
     }
 }
+
