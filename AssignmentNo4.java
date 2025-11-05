@@ -1,20 +1,20 @@
+//PRN : 123B1F067
+//Sagar Najardhane
+//smart traffic conditions implement dijkstras algorithms to determine the optimal ambulance route
 public class AssignmentNo4 {
 
-    // Maximum number of intersections in the city
+   
     static final int MAX_NODES = 100;
-
-    // Graph representation using adjacency matrix
+    
     int[][] graph;
     int totalNodes;
     String[] nodeNames;
 
-    // Constructor to initialize the traffic network
     public AssignmentNo4(int nodes) {
         this.totalNodes = nodes;
         this.graph = new int[nodes][nodes];
         this.nodeNames = new String[nodes];
 
-        // Initialize graph with infinity (no direct connection)
         for (int i = 0; i < nodes; i++) {
             for (int j = 0; j < nodes; j++) {
                 if (i == j) {
@@ -26,18 +26,15 @@ public class AssignmentNo4 {
         }
     }
 
-    // Add name to an intersection
     public void setNodeName(int nodeId, String name) {
         nodeNames[nodeId] = name;
     }
 
-    // Add a road between two intersections
     public void addRoad(int from, int to, int time) {
         graph[from][to] = time;
         graph[to][from] = time; // Bidirectional road
     }
 
-    // Update road time due to traffic changes
     public void updateTraffic(int from, int to, int newTime) {
         graph[from][to] = newTime;
         graph[to][from] = newTime;
@@ -45,7 +42,6 @@ public class AssignmentNo4 {
                 " and " + nodeNames[to] + " now takes " + newTime + " minutes");
     }
 
-    // Find minimum distance node that hasn't been visited
     private int findMinDistanceNode(int[] distance, boolean[] visited) {
         int minDist = Integer.MAX_VALUE;
         int minIndex = -1;
@@ -59,7 +55,6 @@ public class AssignmentNo4 {
         return minIndex;
     }
 
-    // Dijkstra's algorithm implementation
     public void findShortestPath(int source, int[] hospitals, int hospitalCount) {
 
         // Arrays to store distances and visited status
@@ -188,7 +183,6 @@ public class AssignmentNo4 {
 
         AssignmentNo4 system = new AssignmentNo4(10);
 
-        // Set names for intersections
         system.setNodeName(0, "Central Square");
         system.setNodeName(1, "Main Street");
         system.setNodeName(2, "Park Avenue");
@@ -199,8 +193,7 @@ public class AssignmentNo4 {
         system.setNodeName(7, "University Circle");
         system.setNodeName(8, "Sports Complex");
         system.setNodeName(9, "Metro Hospital");
-
-        // Add roads with travel times (in minutes)
+        
         system.addRoad(0, 1, 5);
         system.addRoad(0, 2, 3);
         system.addRoad(1, 3, 7);
@@ -215,18 +208,14 @@ public class AssignmentNo4 {
         system.addRoad(7, 9, 6);
         system.addRoad(8, 9, 7);
 
-        // Ambulance current location
         int ambulanceAt = 0; // Central Square
 
-        // Hospital locations
         int[] hospitalLocations = {3, 6, 9}; // City Hospital, General Hospital, Metro Hospital
         int hospitalCount = 3;
 
-        // Calculate shortest path
         System.out.println("Initial Traffic Conditions:");
         system.findShortestPath(ambulanceAt, hospitalLocations, hospitalCount);
 
-        // Simulate dynamic traffic update 1
         System.out.println("\n\n==========================================");
         System.out.println("  REAL-TIME TRAFFIC UPDATE #1");
         System.out.println("==========================================");
@@ -235,7 +224,6 @@ public class AssignmentNo4 {
         System.out.println("\nRecalculating route with updated conditions...");
         system.findShortestPath(ambulanceAt, hospitalLocations, hospitalCount);
 
-        // Simulate dynamic traffic update 2
         System.out.println("\n\n==========================================");
         System.out.println("  REAL-TIME TRAFFIC UPDATE #2");
         System.out.println("==========================================");
@@ -248,4 +236,5 @@ public class AssignmentNo4 {
         System.out.println("  System ready for continuous monitoring");
         System.out.println("*******************************************\n");
     }
+
 }
