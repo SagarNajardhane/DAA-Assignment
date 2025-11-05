@@ -1,3 +1,6 @@
+//PRN : 123B1F067
+//Sagar Najardhane
+//implemnt mergesort to efficiently organize large scale order on timestamp
 import java.util.*;
 
 class Order {
@@ -17,9 +20,9 @@ public class AssignmentNo1 {
         if (left < right) {
             int mid = (left + right) / 2;
 
-            mergeSort(orders, left, mid);        // Sort left half
-            mergeSort(orders, mid + 1, right);   // Sort right half
-            merge(orders, left, mid, right);     // Merge halves
+            mergeSort(orders, left, mid);        
+            mergeSort(orders, mid + 1, right);  
+            merge(orders, left, mid, right);     
         }
     }
 
@@ -55,7 +58,6 @@ public class AssignmentNo1 {
         }
     }
 
-    // Driver Code
     public static void main(String[] args) {
         int n = 10; // Can go up to 1,000,000 for testing
         Order[] orders = new Order[n];
@@ -79,3 +81,4 @@ public class AssignmentNo1 {
         }
     }
 }
+
