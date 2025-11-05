@@ -1,3 +1,6 @@
+//PRN : 123B1F067
+//Sagar Najardhane
+//Optimal delivery routing implement DP identify cost effective delivery path
 import java.util.*;
 
 class Route {
@@ -16,7 +19,6 @@ public class AssignmentNo5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // -------- Input Stage Configuration --------
         System.out.print("Enter total number of stages: ");
         int stages = sc.nextInt();
 
@@ -31,7 +33,6 @@ public class AssignmentNo5 {
             totalNodes += nodesInStage[i];
         }
 
-        // -------- Input Edge Details --------
         System.out.print("Enter number of edges: ");
         int edgeCount = sc.nextInt();
 
@@ -57,7 +58,6 @@ public class AssignmentNo5 {
             revGraph.get(to).add(from);
         }
 
-        // -------- Dynamic Programming Initialization --------
         final double INF = 1e18;
         double[] minCost = new double[totalNodes];
         Arrays.fill(minCost, INF);
@@ -70,7 +70,6 @@ public class AssignmentNo5 {
             minCost[node] = 0.0;
         }
 
-        // -------- DP Computation (Backward Traversal) --------
         for (int st = stages - 2; st >= 0; st--) {
             for (int j = 0; j < nodesInStage[st]; j++) {
                 int u = startIndex[st] + j;
@@ -89,7 +88,6 @@ public class AssignmentNo5 {
             }
         }
 
-        // -------- Output Initial Best Costs --------
         System.out.println("\nOptimal costs from Stage 0 nodes:");
         for (int j = 0; j < nodesInStage[0]; j++) {
             int node = startIndex[0] + j;
@@ -99,7 +97,6 @@ public class AssignmentNo5 {
                 System.out.printf("Node %d: Cost = %.6f%n", node, minCost[node]);
         }
 
-        // -------- Print Path --------
         System.out.print("\nEnter a source node (stage 0) to display path, or -1 to skip: ");
         int src = sc.nextInt();
 
@@ -129,7 +126,6 @@ public class AssignmentNo5 {
             }
         }
 
-        // -------- Real-Time Updates Section --------
         System.out.print("\nEnter number of live edge cost updates (0 to finish): ");
         int updates = sc.nextInt();
 
@@ -179,7 +175,6 @@ public class AssignmentNo5 {
             }
         }
 
-        // -------- Recompute Output After Updates --------
         System.out.println("\nAfter updates, best costs from Stage 0 nodes:");
         for (int j = 0; j < nodesInStage[0]; j++) {
             int node = startIndex[0] + j;
