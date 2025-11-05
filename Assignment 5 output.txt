@@ -1,0 +1,25 @@
+Enter total number of stages: 3
+Enter node count in each stage (3 values): 2 2 2
+Enter number of edges: 4
+Enter each edge as: source destination cost
+0 2 10
+1 2 15
+2 4 5
+3 4 5
+Enter number of live edge cost updates (0 to finish): 2
+Enter update (u v multiplier): 0 2 1.2
+Enter update (u v multiplier): 1 2 0.8
+
+Optimal costs from Stage 0 nodes:
+Node 0: Cost = 15.000000
+Node 1: Cost = 15.000000
+
+Best path from 0 : 0 -> 2 -> 4
+Total route cost: 15.000000
+
+After updates, optimal costs from Stage 0 nodes:
+Node 0: Cost = 17.000000
+Node 1: Cost = 14.400000
+
+Updated path from 0 : 0 -> 2 -> 4
+Updated route cost: 17.000000

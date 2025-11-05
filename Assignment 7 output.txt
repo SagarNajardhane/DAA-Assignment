@@ -1,0 +1,12 @@
+"C:\Program Files\Java\jdk-22\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.2.0.2\lib\idea_rt.jar=53083:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.2.0.2\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "D:\SEM 5\DAA LAB\Assignment Code\out\production\Assignment Code" AssignmentNo7
+Exam Slot Assignment (Greedy Coloring):
+Course 0 → Slot 0
+Course 1 → Slot 1
+Course 2 → Slot 0
+Course 3 → Slot 1
+Course 4 → Slot 0
+Course 5 → Slot 2
+
+Total Exam Slots Used: 3
+
+Process finished with exit code 0

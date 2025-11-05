@@ -1,0 +1,9 @@
+"C:\Program Files\Java\jdk-22\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.2.0.2\lib\idea_rt.jar=56583:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.2.0.2\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "D:\SEM 5\DAA LAB\Assignment Code\out\production\Assignment Code" AssignmentNo2
+Sorted by RATING:
+The Dark Knight | 9.0 | 2008 | 8000000
+Avengers: Endgame | 8.4 | 2019 | 9000000
+Inception | 8.8 | 2010 | 5000000
+Oppenheimer | 8.7 | 2023 | 6000000
+Interstellar | 8.6 | 2014 | 7000000
+
+Process finished with exit code 0

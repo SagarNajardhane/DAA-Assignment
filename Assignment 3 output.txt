@@ -1,0 +1,10 @@
+"C:\Program Files\Java\jdk-22\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.2.0.2\lib\idea_rt.jar=56717:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.2.0.2\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "D:\SEM 5\DAA LAB\Assignment Code\out\production\Assignment Code" AssignmentNo3
+Selected items for transport:
+- Medical Kits (100%) | value = 500.0
+- Baby Formula (100%) | value = 180.0
+- Food Packets (100%) | value = 300.0
+- Drinking Water (33.33333333333333%) | value = 66.66666666666666
+
+🚤 Maximum total utility value carried: 1046.6666666666667
+
+Process finished with exit code 0
