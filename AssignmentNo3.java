@@ -1,3 +1,6 @@
+//PRN : 123B1F067
+//Sagar Najardhane
+//Emergency relief supply optimization implement the fractional knapsack algo to maximize utility value within given weight constraint
 import java.util.*;
 
 class Item {
@@ -64,3 +67,4 @@ public class AssignmentNo3 {
         System.out.println("\n🚤 Maximum total utility value carried: " + maxValue);
     }
 }
+
